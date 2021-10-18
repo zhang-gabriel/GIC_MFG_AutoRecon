@@ -1,0 +1,107 @@
+2021-10-12 15:15:22 - INFO - C6 recon result captured！
+2021-10-12 15:15:22 - ERROR - 异常信息
+Traceback (most recent call last):
+  File "C:\Users\gabriel_zhang\Desktop\Program\MFG_AutoRecon_Consolidation\main.py", line 484, in <module>
+    conn = create_engine(
+  File "<string>", line 2, in create_engine
+  File "C:\Users\gabriel_zhang\Desktop\Program\MFG_AutoRecon_Consolidation\venv\lib\site-packages\sqlalchemy\util\deprecations.py", line 298, in warned
+    return fn(*args, **kwargs)
+  File "C:\Users\gabriel_zhang\Desktop\Program\MFG_AutoRecon_Consolidation\venv\lib\site-packages\sqlalchemy\engine\create.py", line 518, in create_engine
+    u = _url.make_url(url)
+  File "C:\Users\gabriel_zhang\Desktop\Program\MFG_AutoRecon_Consolidation\venv\lib\site-packages\sqlalchemy\engine\url.py", line 694, in make_url
+    return _parse_rfc1738_args(name_or_url)
+  File "C:\Users\gabriel_zhang\Desktop\Program\MFG_AutoRecon_Consolidation\venv\lib\site-packages\sqlalchemy\engine\url.py", line 750, in _parse_rfc1738_args
+    components["port"] = int(components["port"])
+ValueError: invalid literal for int() with base 10: 'dc37d0ddddlgpmprd11.us.dell.com:6420'
+2021-10-12 15:17:52 - INFO - C6 recon result captured！
+2021-10-12 15:17:52 - ERROR - 异常信息
+Traceback (most recent call last):
+  File "C:\Users\gabriel_zhang\Desktop\Program\MFG_AutoRecon_Consolidation\main.py", line 484, in <module>
+    conn = create_engine(
+  File "<string>", line 2, in create_engine
+  File "C:\Users\gabriel_zhang\Desktop\Program\MFG_AutoRecon_Consolidation\venv\lib\site-packages\sqlalchemy\util\deprecations.py", line 298, in warned
+    return fn(*args, **kwargs)
+  File "C:\Users\gabriel_zhang\Desktop\Program\MFG_AutoRecon_Consolidation\venv\lib\site-packages\sqlalchemy\engine\create.py", line 548, in create_engine
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "C:\Users\gabriel_zhang\Desktop\Program\MFG_AutoRecon_Consolidation\venv\lib\site-packages\sqlalchemy\dialects\postgresql\psycopg2.py", line 793, in dbapi
+    import psycopg2
+ModuleNotFoundError: No module named 'psycopg2'
+2021-10-12 15:18:44 - INFO - C6 recon result captured！
+2021-10-12 15:18:44 - ERROR - 异常信息
+Traceback (most recent call last):
+  File "C:\Users\gabriel_zhang\Desktop\Program\MFG_AutoRecon_Consolidation\main.py", line 484, in <module>
+    conn = create_engine(
+  File "<string>", line 2, in create_engine
+  File "C:\Users\gabriel_zhang\Desktop\Program\MFG_AutoRecon_Consolidation\venv\lib\site-packages\sqlalchemy\util\deprecations.py", line 298, in warned
+    return fn(*args, **kwargs)
+  File "C:\Users\gabriel_zhang\Desktop\Program\MFG_AutoRecon_Consolidation\venv\lib\site-packages\sqlalchemy\engine\create.py", line 548, in create_engine
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "C:\Users\gabriel_zhang\Desktop\Program\MFG_AutoRecon_Consolidation\venv\lib\site-packages\sqlalchemy\dialects\postgresql\psycopg2.py", line 793, in dbapi
+    import psycopg2
+ModuleNotFoundError: No module named 'psycopg2'
+2021-10-12 15:21:52 - INFO - C6 recon result captured！
+2021-10-12 15:22:04 - INFO - Today's result uploaded to database!
+2021-10-12 15:22:06 - ERROR - 异常信息
+Traceback (most recent call last):
+  File "C:\Users\gabriel_zhang\Desktop\Program\MFG_AutoRecon_Consolidation\main.py", line 425, in send_result
+    smtp_mail.sendmail(sender, to_address+cc_address, message.as_string())
+  File "C:\Users\gabriel_zhang\AppData\Local\Programs\Python\Python39\lib\smtplib.py", line 896, in sendmail
+    raise SMTPRecipientsRefused(senderrs)
+smtplib.SMTPRecipientsRefused: {'gabriel_zhang@dell.comgabriel_zhang@dell.com': (501, b"#5.5.2 syntax error 'rcpt TO:<gabriel_zhang@dell.comgabriel_zhang@dell.com>'")}
+2021-10-12 15:29:45 - INFO - C6 recon result captured！
+2021-10-12 15:29:54 - ERROR - 异常信息
+Traceback (most recent call last):
+  File "C:\Users\gabriel_zhang\Desktop\Program\MFG_AutoRecon_Consolidation\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1771, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\gabriel_zhang\Desktop\Program\MFG_AutoRecon_Consolidation\venv\lib\site-packages\sqlalchemy\engine\default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UndefinedColumn: column "Recon_Site" of relation "mfg_recon_data" does not exist
+LINE 1: INSERT INTO ws_go_invn.mfg_recon_data ("Recon_Site", "Recon_...
+                                               ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\gabriel_zhang\Desktop\Program\MFG_AutoRecon_Consolidation\main.py", line 487, in <module>
+    list_all_site.to_sql(name='mfg_recon_data', con=conn, if_exists='append', index=False,schema='ws_go_invn')
+  File "C:\Users\gabriel_zhang\Desktop\Program\MFG_AutoRecon_Consolidation\venv\lib\site-packages\pandas\core\generic.py", line 2872, in to_sql
+    sql.to_sql(
+  File "C:\Users\gabriel_zhang\Desktop\Program\MFG_AutoRecon_Consolidation\venv\lib\site-packages\pandas\io\sql.py", line 717, in to_sql
+    pandas_sql.to_sql(
+  File "C:\Users\gabriel_zhang\Desktop\Program\MFG_AutoRecon_Consolidation\venv\lib\site-packages\pandas\io\sql.py", line 1761, in to_sql
+    sql_engine.insert_records(
+  File "C:\Users\gabriel_zhang\Desktop\Program\MFG_AutoRecon_Consolidation\venv\lib\site-packages\pandas\io\sql.py", line 1350, in insert_records
+    raise err
+  File "C:\Users\gabriel_zhang\Desktop\Program\MFG_AutoRecon_Consolidation\venv\lib\site-packages\pandas\io\sql.py", line 1340, in insert_records
+    table.insert(chunksize=chunksize, method=method)
+  File "C:\Users\gabriel_zhang\Desktop\Program\MFG_AutoRecon_Consolidation\venv\lib\site-packages\pandas\io\sql.py", line 967, in insert
+    exec_insert(conn, keys, chunk_iter)
+  File "C:\Users\gabriel_zhang\Desktop\Program\MFG_AutoRecon_Consolidation\venv\lib\site-packages\pandas\io\sql.py", line 882, in _execute_insert
+    conn.execute(self.table.insert(), data)
+  File "C:\Users\gabriel_zhang\Desktop\Program\MFG_AutoRecon_Consolidation\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1263, in execute
+    return meth(self, multiparams, params, _EMPTY_EXECUTION_OPTS)
+  File "C:\Users\gabriel_zhang\Desktop\Program\MFG_AutoRecon_Consolidation\venv\lib\site-packages\sqlalchemy\sql\elements.py", line 323, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "C:\Users\gabriel_zhang\Desktop\Program\MFG_AutoRecon_Consolidation\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1452, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\gabriel_zhang\Desktop\Program\MFG_AutoRecon_Consolidation\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1814, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\gabriel_zhang\Desktop\Program\MFG_AutoRecon_Consolidation\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1995, in _handle_dbapi_exception
+    util.raise_(
+  File "C:\Users\gabriel_zhang\Desktop\Program\MFG_AutoRecon_Consolidation\venv\lib\site-packages\sqlalchemy\util\compat.py", line 207, in raise_
+    raise exception
+  File "C:\Users\gabriel_zhang\Desktop\Program\MFG_AutoRecon_Consolidation\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1771, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\gabriel_zhang\Desktop\Program\MFG_AutoRecon_Consolidation\venv\lib\site-packages\sqlalchemy\engine\default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedColumn) column "Recon_Site" of relation "mfg_recon_data" does not exist
+LINE 1: INSERT INTO ws_go_invn.mfg_recon_data ("Recon_Site", "Recon_...
+                                               ^
+
+[SQL: INSERT INTO ws_go_invn.mfg_recon_data ("Recon_Site", "Recon_date", "Total_Amount", "Issue_Part_Gross_Amt", "Issue_Part_Net_Amt", "Total_Line_Qty", "Issue_Line_Qty", "Issue_Line_Percentage", "Gross_Amount_Accuracy", "Net_Amount_Accuracy") VALUES (%(Recon_Site)s, %(Recon_date)s, %(Total_Amount)s, %(Issue_Part_Gross_Amt)s, %(Issue_Part_Net_Amt)s, %(Total_Line_Qty)s, %(Issue_Line_Qty)s, %(Issue_Line_Percentage)s, %(Gross_Amount_Accuracy)s, %(Net_Amount_Accuracy)s)]
+[parameters: {'Recon_Site': 'CC6', 'Recon_date': '2021-10-12', 'Total_Amount': 31461123.873200007, 'Issue_Part_Gross_Amt': 2101.277, 'Issue_Part_Net_Amt': -2040.857, 'Total_Line_Qty': 625, 'Issue_Line_Qty': 5, 'Issue_Line_Percentage': 0.008, 'Gross_Amount_Accuracy': 0.99993321036437, 'Net_Amount_Accuracy': 0.999935130829775}]
+(Background on this error at: https://sqlalche.me/e/14/f405)
+2021-10-12 15:44:20 - INFO - C6 recon result captured！
+2021-10-12 15:44:28 - INFO - Today's result uploaded to database!
+2021-10-12 15:44:31 - INFO - Mail already send out!

@@ -1,0 +1,48 @@
+2021-09-23 10:17:36 - INFO - C6今日recon数据已经抓取！
+2021-09-23 10:18:48 - INFO - C6今日recon数据已经抓取！
+2021-09-23 10:18:54 - INFO - APCC今日recon数据已经抓取！
+2021-09-23 10:19:01 - INFO - C2今日recon数据已经抓取！
+2021-09-23 10:19:07 - INFO - C4今日recon数据已经抓取！
+2021-09-23 10:19:12 - INFO - ICC今日recon数据已经抓取！
+2021-09-23 10:19:13 - INFO - 今日Recon数据已同步到数据库
+2021-09-23 10:19:13 - ERROR - 异常信息
+Traceback (most recent call last):
+  File "C:\Users\gabriel_zhang\Desktop\Program\MFG_AutoRecon_Consolidation\main.py", line 375, in <module>
+    send_result(result, to_address, cc_address, file_name)
+  File "C:\Users\gabriel_zhang\Desktop\Program\MFG_AutoRecon_Consolidation\main.py", line 295, in send_result
+    outlook = win32.client.Dispatch("Outlook.Application")
+AttributeError: module 'win32com.client' has no attribute 'client'
+2021-09-23 10:22:59 - INFO - C6今日recon数据已经抓取！
+2021-09-23 10:23:05 - INFO - APCC今日recon数据已经抓取！
+2021-09-23 10:23:12 - INFO - C2今日recon数据已经抓取！
+2021-09-23 10:23:19 - INFO - C4今日recon数据已经抓取！
+2021-09-23 10:23:24 - INFO - ICC今日recon数据已经抓取！
+2021-09-23 10:23:24 - INFO - 今日Recon数据已同步到数据库
+2021-09-23 10:23:24 - ERROR - 异常信息
+Traceback (most recent call last):
+  File "C:\Users\gabriel_zhang\Desktop\Program\MFG_AutoRecon_Consolidation\main.py", line 375, in <module>
+    send_result(result, to_address, cc_address, file_name)
+  File "C:\Users\gabriel_zhang\Desktop\Program\MFG_AutoRecon_Consolidation\main.py", line 313, in send_result
+    mail.Attachments.Add(attachment_url)
+  File "<COMObject <unknown>>", line 2, in Add
+pywintypes.com_error: (-2147352567, 'Exception occurred.', (4096, 'Microsoft Outlook', 'Path does not exist. Verify the path is correct.', None, 0, -2147024893), None)
+2021-09-23 10:28:06 - INFO - C6今日recon数据已经抓取！
+2021-09-23 10:28:12 - INFO - APCC今日recon数据已经抓取！
+2021-09-23 10:28:18 - INFO - C2今日recon数据已经抓取！
+2021-09-23 10:28:25 - INFO - C4今日recon数据已经抓取！
+2021-09-23 10:28:30 - INFO - ICC今日recon数据已经抓取！
+2021-09-23 10:28:30 - INFO - 今日Recon数据已同步到数据库
+2021-09-23 10:28:30 - ERROR - 异常信息
+Traceback (most recent call last):
+  File "C:\Users\gabriel_zhang\Desktop\Program\MFG_AutoRecon_Consolidation\main.py", line 376, in <module>
+    send_result(result, to_address, cc_address, attachement)
+  File "C:\Users\gabriel_zhang\Desktop\Program\MFG_AutoRecon_Consolidation\main.py", line 313, in send_result
+    mail.Attachments.Add(attachment_url)
+  File "<COMObject <unknown>>", line 2, in Add
+pywintypes.com_error: (-2147024809, 'The parameter is incorrect.', None, None)
+2021-09-23 10:31:04 - INFO - C6今日recon数据已经抓取！
+2021-09-23 10:31:09 - INFO - APCC今日recon数据已经抓取！
+2021-09-23 10:31:16 - INFO - C2今日recon数据已经抓取！
+2021-09-23 10:31:23 - INFO - C4今日recon数据已经抓取！
+2021-09-23 10:31:28 - INFO - ICC今日recon数据已经抓取！
+2021-09-23 10:31:28 - INFO - 今日Recon数据已同步到数据库

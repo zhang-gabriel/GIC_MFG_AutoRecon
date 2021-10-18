@@ -1,3 +1,3 @@
-#DL MFG AUTO RECON BETWEEN PRISM AND AX
+# DL GIC MFG AUTO RECON
 
-COVER CCC APCC ICC
+MFG Auto Recon Dashboard beween Prism and Ax, cover APJ sites

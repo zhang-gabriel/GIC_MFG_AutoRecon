@@ -484,11 +484,9 @@ if __name__ == '__main__':
     list_all_site.fillna(value=0, inplace=True)
     try:
 
-
-        #conn = create_engine('mssql+pymssql://Inv:f$msFT7_&#$!@ctupwcc6role2/Inv')
-        conn = create_engine(
-            'postgresql+psycopg2://' + 'gabriel_zhang' + ':' + 'dc37d0dd' + '@ddlgpmprd11.us.dell.com' + ':' + str(
-                6420) + '/' + 'gp_ns_ddl_prod')
+        #连接信息参考onenote
+        #conn = create_engine()
+        conn = create_engine()
         list_all_site.to_sql(name='mfg_recon_data', con=conn, if_exists='append', index=False,schema='ws_go_invn')
         logger.info("Today's result uploaded to database!")
         result.append("Today's result uploaded to database!")
